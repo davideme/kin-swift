@@ -1,5 +1,4 @@
 // Generated from PBXProj.g4 by ANTLR 4.6
-import Antlr4
 
 open class PBXProjParser: Parser {
 
