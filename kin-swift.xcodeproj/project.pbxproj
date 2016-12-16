@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6B59561E1E04539C00688D00 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59561D1E04539C00688D00 /* main.swift */; };
+		6B5956301E0453CA00688D00 /* PBXProjBaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5956271E0453CA00688D00 /* PBXProjBaseListener.swift */; };
+		6B5956311E0453CA00688D00 /* PBXProjLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5956281E0453CA00688D00 /* PBXProjLexer.swift */; };
+		6B5956321E0453CA00688D00 /* PBXProjLexerATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59562A1E0453CA00688D00 /* PBXProjLexerATN.swift */; };
+		6B5956331E0453CA00688D00 /* PBXProjListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59562C1E0453CA00688D00 /* PBXProjListener.swift */; };
+		6B5956341E0453CA00688D00 /* PBXProjParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59562E1E0453CA00688D00 /* PBXProjParser.swift */; };
+		6B5956351E0453CA00688D00 /* PBXProjParserATN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B59562F1E0453CA00688D00 /* PBXProjParserATN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,18 @@
 /* Begin PBXFileReference section */
 		6B59561A1E04539C00688D00 /* kin-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "kin-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B59561D1E04539C00688D00 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		6B5956251E0453CA00688D00 /* PBXProj.g4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PBXProj.g4; sourceTree = "<group>"; };
+		6B5956261E0453CA00688D00 /* PBXProj.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PBXProj.tokens; sourceTree = "<group>"; };
+		6B5956271E0453CA00688D00 /* PBXProjBaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjBaseListener.swift; sourceTree = "<group>"; };
+		6B5956281E0453CA00688D00 /* PBXProjLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjLexer.swift; sourceTree = "<group>"; };
+		6B5956291E0453CA00688D00 /* PBXProjLexer.tokens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PBXProjLexer.tokens; sourceTree = "<group>"; };
+		6B59562A1E0453CA00688D00 /* PBXProjLexerATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjLexerATN.swift; sourceTree = "<group>"; };
+		6B59562B1E0453CA00688D00 /* PBXProjListener.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXProjListener.py; sourceTree = "<group>"; };
+		6B59562C1E0453CA00688D00 /* PBXProjListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjListener.swift; sourceTree = "<group>"; };
+		6B59562D1E0453CA00688D00 /* PBXProjParser.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = PBXProjParser.py; sourceTree = "<group>"; };
+		6B59562E1E0453CA00688D00 /* PBXProjParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjParser.swift; sourceTree = "<group>"; };
+		6B59562F1E0453CA00688D00 /* PBXProjParserATN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjParserATN.swift; sourceTree = "<group>"; };
+		6B59566E1E04552C00688D00 /* kin-swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "kin-swift.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,7 @@
 		6B5956111E04539C00688D00 = {
 			isa = PBXGroup;
 			children = (
+				6B59566E1E04552C00688D00 /* kin-swift.xcodeproj */,
 				6B59561C1E04539C00688D00 /* kin-swift */,
 				6B59561B1E04539C00688D00 /* Products */,
 			);
@@ -57,9 +76,33 @@
 		6B59561C1E04539C00688D00 /* kin-swift */ = {
 			isa = PBXGroup;
 			children = (
+				6B5956241E0453CA00688D00 /* grammar */,
 				6B59561D1E04539C00688D00 /* main.swift */,
 			);
 			path = "kin-swift";
+			sourceTree = "<group>";
+		};
+		6B5956241E0453CA00688D00 /* grammar */ = {
+			isa = PBXGroup;
+			children = (
+				6B5956251E0453CA00688D00 /* PBXProj.g4 */,
+				6B5956261E0453CA00688D00 /* PBXProj.tokens */,
+				6B5956271E0453CA00688D00 /* PBXProjBaseListener.swift */,
+				6B5956281E0453CA00688D00 /* PBXProjLexer.swift */,
+				6B5956291E0453CA00688D00 /* PBXProjLexer.tokens */,
+				6B59562A1E0453CA00688D00 /* PBXProjLexerATN.swift */,
+				6B59562B1E0453CA00688D00 /* PBXProjListener.py */,
+				6B59562C1E0453CA00688D00 /* PBXProjListener.swift */,
+				6B59562D1E0453CA00688D00 /* PBXProjParser.py */,
+				6B59562E1E0453CA00688D00 /* PBXProjParser.swift */,
+				6B59562F1E0453CA00688D00 /* PBXProjParserATN.swift */,
+			);
+			path = grammar;
+			sourceTree = "<group>";
+		};
+		6B59566F1E04552C00688D00 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +152,12 @@
 			mainGroup = 6B5956111E04539C00688D00;
 			productRefGroup = 6B59561B1E04539C00688D00 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B59566F1E04552C00688D00 /* Products */;
+					ProjectRef = 6B59566E1E04552C00688D00 /* kin-swift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6B5956191E04539C00688D00 /* kin-swift */,
@@ -121,7 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5956331E0453CA00688D00 /* PBXProjListener.swift in Sources */,
+				6B5956321E0453CA00688D00 /* PBXProjLexerATN.swift in Sources */,
+				6B5956301E0453CA00688D00 /* PBXProjBaseListener.swift in Sources */,
 				6B59561E1E04539C00688D00 /* main.swift in Sources */,
+				6B5956341E0453CA00688D00 /* PBXProjParser.swift in Sources */,
+				6B5956311E0453CA00688D00 /* PBXProjLexer.swift in Sources */,
+				6B5956351E0453CA00688D00 /* PBXProjParserATN.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +275,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = N53CWP57ZW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/kin-swift",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -229,6 +288,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = N53CWP57ZW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/kin-swift",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -253,6 +316,7 @@
 				6B5956231E04539C00688D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
